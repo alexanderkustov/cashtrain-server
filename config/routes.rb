@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  get 'api/cashtrain/stations'
-  get 'api/cashtrain/possibleTravellingTrains'
+  get 'api/cashtrain/stations' => 'api#stations'
+  get 'api/cashtrain/possibleTravellingTrains' => 'api#possibleTravellingTrains'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
