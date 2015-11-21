@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pages/index'
+  root 'pages#index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get 'api/cashtrain/stations' => 'api#stations'
