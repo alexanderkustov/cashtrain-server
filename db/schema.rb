@@ -11,37 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121125453) do
+ActiveRecord::Schema.define(version: 20151121194057) do
 
-  create_table "feedbacks", force: :cascade do |t|
-    t.string   "train_id"
+  create_table "feedbacks", force: true do |t|
+    t.string   "train_id",   limit: nil
     t.float    "feedback"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
-  create_table "offers", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "offers", force: true do |t|
+    t.string   "title",       limit: nil
+    t.string   "description", limit: nil
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "address"
-    t.string   "train_id"
+    t.string   "address",     limit: nil
+    t.string   "train_id",    limit: nil
+    t.integer  "points"
   end
 
-  create_table "stations", force: :cascade do |t|
-    t.string   "name"
-    t.string   "code"
-    t.string   "nlc"
+  create_table "stations", force: true do |t|
+    t.string   "name",          limit: nil
+    t.string   "code",          limit: nil
+    t.string   "nlc",           limit: nil
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "group_station"
-    t.string   "short_name"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.string   "address"
+    t.string   "group_station", limit: nil
+    t.string   "short_name",    limit: nil
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "address",       limit: nil
   end
 
 end

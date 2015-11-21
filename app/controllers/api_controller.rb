@@ -21,7 +21,7 @@ class ApiController < ApplicationController
 
   def possibleOffers
     @nearest_station = Station.near([params[:latitude].to_s, params[:longitude].to_s], 5).first
-
+    @offer = Offer.first
     #dev hack
     if Rails.env.development?
       params[:destination] = "YRK"
