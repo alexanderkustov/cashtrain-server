@@ -8,7 +8,7 @@ json.nextTrain do
   json.estimatedArrivalTime @response_body.take(2).first['estimatedArrivalTime']
   json.scheduledArrivalTime @response_body.take(2).first['scheduledArrivalTime']
   json.platform @response_body.take(2).first['platform']
-  json.overcrowdingIndex 0
+  json.overcrowdingIndex crowd_index(@response_body.take(2).first['serviceId'])
 end
 json.uncrowdedTrain do
   json.serviceId @response_body.take(2).last['serviceId']
@@ -18,5 +18,5 @@ json.uncrowdedTrain do
   json.estimatedArrivalTime @response_body.take(2).last['estimatedArrivalTime']
   json.scheduledArrivalTime @response_body.take(2).last['scheduledArrivalTime']
   json.platform @response_body.take(2).last['platform']
-  json.overcrowdingIndex 0
+  json.overcrowdingIndex 1.5
 end

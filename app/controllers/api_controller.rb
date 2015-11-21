@@ -39,7 +39,7 @@ class ApiController < ApplicationController
   end
 
   def overcrowding
-     Offer.create(feedback_params)
+     Feedback.create(feedback_params)
      render json: "Feedback Recorded"
   end
 
