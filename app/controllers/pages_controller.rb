@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   def index
     @stations = Station.all
+    @feedback = Feedback.all
+    @offers = Offer.all
 
     @hash = Gmaps4rails.build_markers(@stations) do |station, marker|
       marker.lat station.latitude

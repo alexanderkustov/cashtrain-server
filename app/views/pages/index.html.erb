@@ -9,15 +9,35 @@
 <div class="row">
   <div class="col-md-6">
     <h2>Latest Reported Overcrowdings</h2>
-    <% Feedback.all do |f| %>
-      <%= f.train_id %>
-      <%= f.feedback %>
-      <%= f.created_at %>
+
+
+
+        <table class="table">
+      <caption>Optional table caption.</caption>
+      <thead>
+        <tr>
+
+          <th>Service ID</th>
+          <th>Average Feedback</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+    <% @feedback.each do |f| %>
+    <tr>
+
+      <td><%= f.train_id %></td>
+      <td><%= f.feedback %></td>
+      <td><%= time_ago_in_words(f.created_at) %></td>
+        </tr>
+
     <% end %>
+    </tbody>
+    </table>
   </div>
   <div class="col-md-6">
     <h2>Latest Issued Offers</h2>
-     <% Offer.all do |f| %>
+     <% @offers.each do |f| %>
       <%= f.train_id %>
       <%= f.latitude %>
       <%= f.longitude %>
