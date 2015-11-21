@@ -45,10 +45,10 @@ class ApiController < ApplicationController
 
   protected
     def permitted_params
-      params.permit(:train_id, :latitude, :longitude)
+      params.permit(:train_id, :latitude, :longitude, :destination)
     end
 
     def feedback_params
-      params.permit(:train_id, :feedback)
+      params.permit(:train_id, :overcrowdingScale)
     end
 end

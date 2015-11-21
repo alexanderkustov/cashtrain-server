@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   post 'api/cashtrain/create' => 'api#create'
   post 'api/cashtrain/overcrowding' => 'api#overcrowding'
-  post 'api/cashtrain/offers' => 'api#offers'
+  post 'api/cashtrain/userFeedbackRequest' => 'api#offers'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

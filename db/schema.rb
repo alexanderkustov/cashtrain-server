@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121194057) do
+ActiveRecord::Schema.define(version: 20151121214630) do
 
   create_table "feedbacks", force: true do |t|
-    t.string   "train_id",   limit: nil
-    t.float    "feedback"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "train_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.float    "overcrowdingScale"
   end
 
   create_table "offers", force: true do |t|
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20151121194057) do
     t.string   "address",     limit: nil
     t.string   "train_id",    limit: nil
     t.integer  "points"
+    t.string   "destination"
   end
 
   create_table "stations", force: true do |t|

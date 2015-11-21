@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def crowd_index(train_id)
-    arr = Feedback.where(train_id: train_id).map(&:feedback)
+    arr = Feedback.where(train_id: train_id).map(&:overcrowdingScale)
     arr.inject{ |sum, el| sum + el }.to_f / arr.size
   end
   helper_method :crowd_index
