@@ -7,4 +7,5 @@ json.offers @response_body.take(2).each do |r|
   json.estimatedDepartureTime r['estimatedDepartureTime']
   json.estimatedArrivalTime r['estimatedArrivalTime']
   json.scheduledArrivalTime r['scheduledArrivalTime']
+  json.serviceId r['serviceId']
 end
