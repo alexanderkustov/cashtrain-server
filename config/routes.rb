@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'api/cashtrain/possibleTravellingTrains' => 'api#possibleTravellingTrains'
   get 'api/cashtrain/possibleOffers' => 'api#possibleOffers'
 
-  post 'api/cashtrain/create' => 'api#create'
   post 'api/cashtrain/overcrowding' => 'api#overcrowding'
   post 'api/cashtrain/userFeedbackRequest' => 'api#offers'
 
