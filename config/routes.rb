@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   get 'api/cashtrain/stations' => 'api#stations'
   get 'api/cashtrain/possibleTravellingTrains' => 'api#possibleTravellingTrains'
+  get 'api/cashtrain/possibleOffers' => 'api#possibleOffers'
 
+  post 'api/cashtrain/overcrowding' => 'api#overcrowding'
+  post 'api/cashtrain/offers' => 'api#offers'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
