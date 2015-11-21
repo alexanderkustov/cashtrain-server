@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  nlc: MyString
+  latitude: 1.5
+  longitude: 1.5
+  group_station: MyString
+  short_name: MyString
+
+two:
+  name: MyString
+  code: MyString
+  nlc: MyString
+  latitude: 1.5
+  longitude: 1.5
+  group_station: MyString
+  short_name: MyString
